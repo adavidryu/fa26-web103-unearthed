@@ -1,4 +1,5 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import giftsRouter from './routes/gifts.js';
@@ -18,6 +19,10 @@ app.use('/gifts', giftsRouter);
 
 app.get('/', (req, res) => {
   res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">UnEarthed API</h1>');
+});
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.resolve(__dirname, 'public/404.html'));
 });
 
 app.listen(PORT, () => {

@@ -12,7 +12,7 @@ const giftData = [
   {
     id: 2,
     name: 'iPad Pro',
-    pricePoint: '$999-$1,299',
+    pricePoint: '$999',
     audience: 'Creatives',
     image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=85',
     description: 'A genuinely useful upgrade for drawing, editing, note-taking, and carrying one less thing around.',
