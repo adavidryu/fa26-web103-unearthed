@@ -1,16 +1,16 @@
 import express from 'express';
+import cors from 'cors'
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import giftsRouter from './routes/gifts.js';
 
 const app = express();
+app.use(cors())
 const PORT = process.env.PORT || 3001;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use('/public', express.static('./public'));
-app.use('/scripts', express.static('./public/scripts'));
 app.use(express.static('./public'));
 app.get('/style.css', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/style.css'));
