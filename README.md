@@ -8,3 +8,6 @@
 
 ## Lab 3
 ![Unearthed database app](client/public/assets/lab3.gif)
+
+## Lab 4
+![Unearthed database app](client/public/assets/lab4.gif)
